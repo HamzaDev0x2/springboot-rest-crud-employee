@@ -42,7 +42,7 @@ public class StudentRestController {
             throw new StudentNotFoundException("Student id not found : "+ studentId);
         return students.get(studentId);
     }
-
+/*
     //add exception handler using @ExceptionHandler
     @ExceptionHandler
     public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exc)
@@ -53,7 +53,8 @@ public class StudentRestController {
         response.setStatus(HttpStatus.NOT_FOUND.value());
         response.setMessage(exc.getMessage());
         response.setTimeStamp(System.currentTimeMillis());
-
+        System.out.println("local exception handler");
+        
         //Return a response entity
         return new ResponseEntity<StudentErrorResponse>(response, HttpStatus.NOT_FOUND);
     }
@@ -68,10 +69,13 @@ public class StudentRestController {
         response.setStatus(HttpStatus.BAD_REQUEST.value());
         response.setMessage(exc.getMessage());
         response.setTimeStamp(System.currentTimeMillis());
+         System.out.println("local exception handler");
 
         //Return a response entity
         return new ResponseEntity<StudentErrorResponse>(response, HttpStatus.BAD_REQUEST);
     }
+
+ */
 }
 
 

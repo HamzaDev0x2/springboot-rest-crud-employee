@@ -3,7 +3,7 @@ package hamzadev.local.rest_sevice_04.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="emplyee")
+@Table(name="employee")
 public class Employee {
 
     //define fields
